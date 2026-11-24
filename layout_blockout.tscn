@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://b0k3dld2wog5k"]
+
+[ext_resource type="PackedScene" uid="uid://bfpi1d4a30wip" path="res://player/player.tscn" id="1_betoy"]
+[ext_resource type="Script" uid="uid://capmejgjydn7a" path="res://addons/level_block/level_block_cube.gd" id="2_ode6y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tpq1k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ode6y"]
+
+[sub_resource type="Environment" id="Environment_tpq1k"]
+
+[node name="Node3D" type="Node3D" unique_id=779882166]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=109973398]
+transform = Transform3D(42.24, 0, 0, 0, 62.226, 0, 0, 0, 42.24, -73.215004, 30.222776, 56.96881)
+mesh = SubResource("BoxMesh_tpq1k")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=402895663]
+transform = Transform3D(42.448, 0, 0, 0, 146.054, 0, 0, 0, 42.448, -72.9368, 64.084885, -50.779884)
+mesh = SubResource("BoxMesh_tpq1k")
+
+[node name="Player" parent="." unique_id=1929208147 instance=ExtResource("1_betoy")]
+transform = Transform3D(2.2598, 0, 0, 0, 1, 0, 0, 0, 1, 491.58032, 102.68469, 366.8443)
+
+[node name="Floor" type="Node3D" parent="." unique_id=1186159194]
+transform = Transform3D(49.618607, 0, 0, 0, 11.165, 0, 0, 0, 115.17884, 533.1724, -19.067032, 615.31775)
+visible = false
+script = ExtResource("2_ode6y")
+size = Vector3(40, 1, 80)
+
+[node name="WALL_BIG_BRUTALIST" type="Node3D" parent="." unique_id=1176626170]
+transform = Transform3D(0.6281767, 0, 325.05283, 0, 110.60705, 0, -0.4464116, 0, 457.40433, 5.854706, 34.50464, 941.0034)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+collision_layer = 9
+
+[node name="HOUSE_OR_FACTORY_1" type="Node3D" parent="." unique_id=518734518]
+transform = Transform3D(44.495, 0, 0, 0, 58.399765, 0, 0, 0, 36.00255, 445.0152, 0, 844.72284)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="HOUSE_OR_FACTORY_2" type="Node3D" parent="." unique_id=624481934]
+transform = Transform3D(44.495, 0, 0, 0, 58.399765, 0, 0, 0, 36.00255, 243.13611, 0, -24.282394)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="HOUSE_OR_FACTORY_3" type="Node3D" parent="." unique_id=1336366903]
+transform = Transform3D(44.495, 0, 0, 0, 58.399765, 0, 0, 0, 36.00255, 1469.8375, 44.923584, -170.05122)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="METEORITE_1" type="Node3D" parent="." unique_id=2135810660]
+transform = Transform3D(59.606327, 0, 0, 0, 48.944683, 0, 0, 0, 57.851093, 383.4248, 0, 202.12112)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="METEORITE_2" type="Node3D" parent="." unique_id=963789719]
+transform = Transform3D(59.606327, 0, 0, 0, 48.944683, 0, 0, 0, 57.851093, 1215.1207, 0, 700.1146)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="METEORITE_3" type="Node3D" parent="." unique_id=423868204]
+transform = Transform3D(59.606327, 0, 0, 0, 48.944683, 0, 0, 0, 57.851093, 1033.7681, 0, -304.8108)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="SCAFFOLING_STAIRCASE" type="Node3D" parent="." unique_id=1943682574]
+transform = Transform3D(14.621915, 0, -9.862122, 0, 53.383293, 0, 21.590961, 0, 6.6788654, -212.14873, 0, 417.24576)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="CLIMEABLE_1" type="Node3D" parent="." unique_id=1373653927]
+transform = Transform3D(-109.50294, -4.588422, -6.9525895, -27.186577, 18.481392, -1.7261376, 76.18526, 0, -10.6091, -251.24077, 39.30127, 343.33707)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="CLIMEABLE_2" type="Node3D" parent="." unique_id=61496385]
+transform = Transform3D(-67.73231, 0.20272112, 10.569324, 15.033231, 17.902409, 0.26575306, -162.32469, 1.573393, -4.385588, 65.30826, 158.07916, 24.562714)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="climable thingy" type="Node3D" parent="." unique_id=1548522589]
+transform = Transform3D(213.60127, 0, -2.7995553, 0, 14.866463, 0, 304.45767, 0, 1.9641111, -1.3800507, 88.19725, 688.65576)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="climable thingy2" type="Node3D" parent="." unique_id=1970622352]
+transform = Transform3D(-217.63254, 0, -0.09065884, 0, 14.866463, 0, 5.8363523, 0, -3.38059, 158.63976, 88.19725, 688.65576)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="climable thingy3" type="Node3D" parent="." unique_id=370363077]
+transform = Transform3D(-5.8363423, 0, 3.3805897, 0, 14.866463, 0, -217.6325, 0, -0.09065869, 1025.4047, 88.19725, -209.4599)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="climable thingy4" type="Node3D" parent="." unique_id=2043035851]
+transform = Transform3D(95.34776, 0, 0.090120085, 0, 14.866463, 0, -2.5569766, 0, 3.3605108, 1404.4252, 88.19725, -209.4599)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="climable thingy5" type="Node3D" parent="." unique_id=937232420]
+transform = Transform3D(-1.1313287e-05, -14.866461, 4.7058467e-08, 258.2277, -6.498337e-07, 0.49430174, -6.9249897, 0, 18.432144, 1404.4252, 1195.7137, -239.02583)
+script = ExtResource("2_ode6y")
+size = Vector3(4, 3, 4)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=109412619]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1596436485]
+transform = Transform3D(47.954853, 0, 0, 0, 10.792829, 0, 0, 0, 27.662762, 725.3903, 6.897316, 0)
+size = Vector3(70.25305, 1, 80)
+material = SubResource("StandardMaterial3D_ode6y")
+
+[node name="hole_square_1" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1087316352]
+transform = Transform3D(83.085, 0, 0, 0, 83.085, 0, 0, 0, 83.085, -0.3187027, 0.34562683, -286.03314)
+operation = 2
+
+[node name="hole_square_2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2020692078]
+transform = Transform3D(59.535, 0, 0, 0, 59.535, 0, 0, 0, 59.535, 788.7762, -25.74794, -901.2032)
+operation = 2
+size = Vector3(7.333496, 3.3813477, 2.9473877)
+
+[node name="hole_1" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1949211844]
+transform = Transform3D(681.116, 0, 0, 0, 102.567, 0, 0, 0, 715.668, -443.85287, -22.348297, -621.81305)
+operation = 2
+radius = 0.6376953
+
+[node name="hole_2" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1659137097]
+transform = Transform3D(681.116, 0, 0, 0, 102.567, 0, 0, 0, 715.668, 397.15002, -22.348297, -465.93536)
+operation = 2
+radius = 0.4296875
+
+[node name="hole_3" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1831777970]
+transform = Transform3D(681.116, 0, 0, 0, 102.567, 0, 0, 0, 715.668, -1.0064697, -22.348297, 241.88873)
+operation = 2
+radius = 0.18359375
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=300305036]
+transform = Transform3D(-0.9905895, 0.1368666, 0, -0.1368666, -0.9905895, 0, 0, 0, 1, 0, 772.5786, 1089.6704)
+light_color = Color(18.892157, 18.892157, 18.892157, 1)
+light_energy = 25.2
+light_indirect_energy = 9.265
+light_volumetric_fog_energy = 6.015
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1362739842]
+environment = SubResource("Environment_tpq1k")
