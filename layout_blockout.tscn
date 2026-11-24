@@ -7,7 +7,35 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ode6y"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
+sky_top_color = Color(0.18, 0.42, 0.82, 1)
+sky_horizon_color = Color(0.68, 0.8, 0.92, 1)
+sky_curve = 0.18
+ground_bottom_color = Color(0.22, 0.24, 0.27, 1)
+ground_horizon_color = Color(0.62, 0.7, 0.78, 1)
+ground_curve = 0.03
+sun_curve = 0.08
+
+[sub_resource type="Sky" id="Sky_main"]
+sky_material = SubResource("ProceduralSkyMaterial_sky")
+
 [sub_resource type="Environment" id="Environment_tpq1k"]
+background_mode = 2
+sky = SubResource("Sky_main")
+ambient_light_source = 3
+ambient_light_energy = 0.9
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_white = 6.0
+ssao_enabled = true
+ssao_radius = 6.0
+glow_enabled = true
+glow_intensity = 0.4
+glow_bloom = 0.05
+fog_enabled = true
+fog_light_color = Color(0.68, 0.8, 0.92, 1)
+fog_density = 0.0004
+fog_sky_affect = 0.0
 
 [node name="Node3D" type="Node3D" unique_id=779882166]
 
@@ -20,7 +48,7 @@ transform = Transform3D(42.448, 0, 0, 0, 146.054, 0, 0, 0, 42.448, -72.9368, 64.
 mesh = SubResource("BoxMesh_tpq1k")
 
 [node name="Player" parent="." unique_id=1929208147 instance=ExtResource("1_betoy")]
-transform = Transform3D(2.2598, 0, 0, 0, 1, 0, 0, 0, 1, 491.58032, 102.68469, 366.8443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 491.58032, 102.68469, 366.8443)
 
 [node name="Floor" type="Node3D" parent="." unique_id=1186159194]
 transform = Transform3D(49.618607, 0, 0, 0, 11.165, 0, 0, 0, 115.17884, 533.1724, -19.067032, 615.31775)
@@ -137,12 +165,13 @@ operation = 2
 radius = 0.18359375
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=300305036]
-transform = Transform3D(-0.9905895, 0.1368666, 0, -0.1368666, -0.9905895, 0, 0, 0, 1, 0, 772.5786, 1089.6704)
-light_color = Color(18.892157, 18.892157, 18.892157, 1)
-light_energy = 25.2
-light_indirect_energy = 9.265
-light_volumetric_fog_energy = 6.015
+transform = Transform3D(0.819152, 0.439385, -0.368688, 0, 0.642788, 0.766044, 0.573576, -0.627507, 0.526541, 0, 0, 0)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 1.6
+light_angular_distance = 0.5
 shadow_enabled = true
+directional_shadow_split_1 = 0.05
+directional_shadow_max_distance = 1200.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1362739842]
 environment = SubResource("Environment_tpq1k")
